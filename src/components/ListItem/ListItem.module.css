@@ -5,11 +5,11 @@
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
-  word-wrap: break-word;
+  word-break: break-all;
   display: flex;
   align-items: center;
   color: rgb(28, 24, 67);
-  justify-content:flex-start;
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 
@@ -36,4 +36,24 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+
+.input {
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  flex-grow: 1;
+}
+
+.edit {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1
+}
+
+.saveButton {
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 5px;
 }

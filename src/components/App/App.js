@@ -54,10 +54,23 @@ function App() {
       }
     }))
   }
+
   const removeToDo = (id) => {
     const newList = list.filter(item => item.id !== id);
     todoFilter(filter, newList);
     setList(newList);
+  }
+
+  const editToDo = (id, newText) => {
+    setList(list.map(item => {
+      if (item.id !== id) {
+        return item;
+      }
+      return {
+        ...item,
+        text: newText
+      }
+    }))
   }
 
   return (
@@ -65,7 +78,7 @@ function App() {
       <div className={styles.container}>
         <h1 className={styles.title}>Список дел</h1>
         <Form putToDo={putToDo} filter={filter} setFilter={setFilter} />
-        <TodoList list={filtered} toggleToDo={toggleToDo} removeToDo={removeToDo} />
+        <TodoList list={filtered} toggleToDo={toggleToDo} removeToDo={removeToDo} editToDo={editToDo}/>
       </div>
     </div>
   );
