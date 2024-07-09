@@ -27,12 +27,12 @@ const Form = (props) => {
     <form class={styles.form} onSubmit={handleSubmit}>
       <input type="text" placeholder="Введите текст..." className={styles.input} value={value} onChange={handleChange} />
       {error && <div className={styles.error}>{error}</div>}
+      <button type="submit" className={styles.button}>Добавить задачу</button>
       <select className={styles.select} value={props.filter} onChange={e => props.setFilter(e.target.value)}>
         <option value="all">Все задачи</option>
         <option value="done">Выполненные</option>
         <option value="notDone">Невыполненные</option>
       </select>
-      <button type="submit" className={styles.button}>Добавить задачу</button>
     </form>
   )
 }
