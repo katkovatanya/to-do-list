@@ -32,6 +32,7 @@ const Form = (props) => {
         <option value="done">Выполненные</option>
         <option value="notDone">Невыполненные</option>
       </select>
+      <button type="submit" className={styles.button}>Добавить задачу</button>
     </form>
   )
 }
