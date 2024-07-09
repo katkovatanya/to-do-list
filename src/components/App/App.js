@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import styles from "./App.module.css";
 import Form from "../Form/Form";
+import List from "../List/List";
 
 
 function App() {
@@ -36,19 +37,7 @@ function App() {
       <div className={styles.container}>
         <h1 className={styles.title}>Список дел</h1>
         <Form putToDo={putToDo} />
-        <ul className={styles.list}>
-          {list.map(item => {
-            return (
-              <li className={`${styles.item} ${item.done ? styles.done : ''}`} key={item.id} onClick={() => toggleToDo(item.id)}>
-                {item.text}
-                <img src="./delete.png" alt="delete" className={styles.delete} onClick={(e) => {
-                  e.stopPropagation();
-                  removeToDo(item.id);
-                }} />
-              </li>
-            )
-          })}
-        </ul>
+        <List list={list} toggleToDo={toggleToDo} removeToDo={removeToDo} />
       </div>
     </div>
   );
