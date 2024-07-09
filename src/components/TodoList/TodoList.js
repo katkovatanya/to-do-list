@@ -1,7 +1,7 @@
 import ListItem from "../ListItem/ListItem";
-import styles from "./List.module.css";
+import styles from "./TodoList.module.css";
 
-const List = (props) => {
+const TodoList = (props) => {
   return (
     <ul className={styles.list}>
       {props.list.map(item => {
@@ -13,4 +13,4 @@ const List = (props) => {
   )
 }
 
-export default List;
+export default TodoList;

@@ -8,12 +8,28 @@
   word-wrap: break-word;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  color: rgb(28, 24, 67);
+  justify-content:flex-start;
+  box-sizing: border-box;
 }
 
 .done {
-  text-decoration: line-through;
   background-color: greenyellow;
+}
+
+.item::before {
+  content: "☐";
+  margin-right: 10px;
+}
+
+.done::before {
+  content: "☑";
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto;
 }
 
 .delete {
