@@ -23,6 +23,7 @@
   margin-top: 10px;
   background: white;
   color: rgb(28, 24, 67);
+  cursor: pointer;
 }
 
 .error {
